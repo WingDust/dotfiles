@@ -64,16 +64,16 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -207,7 +207,7 @@ default_floating_border pixel 1
 
 # start program launcher 绑定为 rofi
 bindsym $mod+d exec --no-startup-id "rofi -modi window,drun,run -show drun"
-# bindsym $mod+x exec --no-startup-id "rofi -modi window,drun,run -show window"
+bindsym $mod+F2 exec --no-startup-id "rofi -modi window,drun,run -show window"
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -215,6 +215,11 @@ bindsym $mod+Return exec $term
 # gap
 gaps inner 2
 # gaps outer 3
+
+
+# for_window [window_role="pop-up"] floating enable       # 让弹窗以浮动窗口打开
+# for_window [window_role="task_dialog"] floating enable
+
 
 # set titlebar_border_thickness 0
 # set titlebar_padding 0
@@ -227,8 +232,9 @@ exec_always --no-startup-id picom
 # exec_always compton -b
 
 # i3-alt-tab
-bindsym $mod+Tab exec $HOME/.config/i3/i3-alt-tab.py next current
-bindsym $mod+Shift+Tab exec $HOME/.config/i3/i3-alt-tab.py prev current
+# bindsym $mod+Tab exec HOME/.config/i3/i3-alt-tab.py next current
+# bindsym $mod+Ctrl+Tab exec $HOME/.config/i3/i3-alt-tab.py prev current
+# bindsym $mod+Shift+Tab exec $HOME/.config/i3/i3-alt-tab.py prev current
 # bindsym $alt+Tab exec /home/wingdust/i3-alt-tab.py next current
 # bindsym $alt+Shift+Tab exec /home/wingdust/i3-alt-tab.py prev current
 
@@ -239,3 +245,14 @@ exec_always feh --bg-scale "/home/wingdust/Downloads/piano.png"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id polybar
 # bindsym $mod+p --no-startup-id polybar-msg cmd toggle
+
+# bindsym $mod+p XF86AudioRaiseVolume exec amixer -c 0 set Master 5%+
+# bindsym $mod+n XF86AudioLowerVolume exec amixer -c 0 set Master 5%-
+
+exec_always --no-startup-id alttab
+
+
+exec_always --no-startup-id klipper
+
+# auto hide cursor
+exec_always --no-startup-id unclutter &

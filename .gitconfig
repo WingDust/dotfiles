@@ -1,4 +1,11 @@
 [user]
 	email = 995315823@qq.com
 	name = wingdust
-
+# [https]
+	# proxy = http://127.0.0.1:20171
+[http]
+	version = HTTP/1.1
+[url "https://hub.gitslow.tk/"]
+	insteadOf = https://github.com/
+[url "https://hub.verge.tk/"]
+	insteadOf = https://github.com/
